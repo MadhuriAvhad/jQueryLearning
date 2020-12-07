@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Effects in jQuery</title>
+    <link rel="stylesheet" href="css/stylling.css">
+</head>
+<body>
+    
+    <h2 id="headfirst">Selectors up jQuery</h2>
+    <!-- <h2 class="headingTwo" id="headSecond">Selectors up jQuery</h2>
+    <h2 id="headThird">Selectors up jQuery</h2>
+    <h2 id="headForth">Selectors up jQuery</h2> -->
+    <p>This paragraph is not in DIV tag </p>
+
+    <button class="ananomous" id="btn">CLICK 1</button>
+    <button class="ananomous" id="btn1">CLICK 2</button>
+    <button class="ananomous" id="toggle">TOGGLE</button>
+    <button class="ananomous" id="animate">ANIMATE</button>
+
+    <div id="firstDiv" class="myDiv">
+        <p>This is my FIRST DIV 1st paragraph</p>
+        <p>This is my FIRST DIV 2nd paragraph</p>
+    </div>
+
+    <div id="secondDiv" class="myDiv">
+        <p>This is my SECOND DIV paragraph</p>
+    </div>
+
+    <div id="thirdDiv" class="myDiv">
+        <ul>
+            <li>List item ONE</li>
+            <li>List item TWO</li>
+            <li>List item THREE</li>
+            <li>List item FOUR</li>
+        </ul>
+    </div>
+
+    <div id="cube" class="myCube">
+        <p>CUBE</p>
+    </div>
+
+</body>
+<script src="jquery-3.5.1.js" type="text/javascript"></script>
+<script>
+    $(document).ready(function(){
+
+        $("#btn").click(function(){
+            $("#firstDiv").fadeOut();  //hide,slideUp
+        })
+
+        $("#btn1").click(function(){
+            $("#firstDiv").fadeIn();  //show,slideDown
+        })
+
+        $("#toggle").click(function(){
+            $("#firstDiv").fadeToggle(2000, function(){ //callback
+                alert("Division is faded");
+            });  //toggle,slideToggle
+
+            $("#secondDiv").slideUp(2500).slideDown(2500)
+                .fadeOut(2500).fadeIn(2500);    //chaining effect
+        })
+
+        $("#animate").click(function(){
+            $("#cube").animate({
+                left: '150px',
+                opacity:'1',
+                width: '100px',
+                height: '100px',
+                padding: '50px'
+            },3000)
+        })
+    });
+
+    
+</script>
+</html>
