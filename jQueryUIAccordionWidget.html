@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Accordion in jQueryUI</title>
+    <link rel="stylesheet" href="css/jQueryUI.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.structure.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.theme.css">
+
+</head>
+
+<body>
+   <h2>Accordion Example</h2>
+   <div id="panels">
+       <h3>Learning</h3>
+       <p>jQueryUI is used for the front end developing tool. Through which we learn to develop web site or design it.</p>
+
+       <h3>Practical</h3>
+       <p>jQueryUI is used for the front end developing tool. Through which we learn to develop web site or design it.
+           jQueryUI is used for the front end developing tool. Through which we learn to develop web site or design it.
+           jQueryUI is used for the front end developing tool. Through which we learn to develop web site or design it.</p>
+
+       <h3>Exprience</h3>
+       <p>jQueryUI is used for the front end developing tool. Through which we learn to develop web site or design it.</p>
+   </div>
+</body>
+
+<script src="jquery-3.5.1.js" type="text/javascript"></script>
+
+<script src="jquery-ui-1.12.1/jquery-ui.js" type="text/javascript"></script>
+
+<script>
+    $("#panels").accordion({
+        collapsible:true,
+        //event:"mouseover",
+        animate: 500,
+        //active:0
+        heightStyle:true,
+        icons:{header:"ui-icon-plus", activeHeader:"ui-icon-minus"}
+    });
+</script>
+
+</html>

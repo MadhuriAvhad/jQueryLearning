@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>jQuery DOM Manipulation</title>
+    <link rel="stylesheet" href="css/stylling.css">
+</head>
+ <!--   append() - Inserts content at the end of the selected elements.
+        prepend() - Inserts content at the beginning of the selected elements.
+        after() - Inserts content after the selected elements.
+        before() - Inserts content before the selected elements. -->
+<body>
+    <h3>jQuery - DOM Manipulation</h3>
+    <button id="btn1">Append</button>
+    <button id="btn2">After</button> <br><br>
+    <button id="btn3">Prepend</button>
+    <button id="btn4">Before</button> <br><br>
+    <button id="btn5">Remove</button>
+    <button id="btn6">Empty</button> <br><br>
+
+    <div id="div1" class="myDiv">
+        <p id="p1" class="p1class" value="Hello World"> 
+            This is <b>1st PARAGRAPH</b> is written in <i>DIV</i>.</p>
+            <p id="p2" class="p1class" value="Hello World"> 
+                This is <b>2nd PARAGRAPH</b> is written in <i>DIV</i>.</p>
+
+    </div>
+</body>
+
+<script src="jquery-3.5.1.js" type="text/javascript"></script>
+
+<script>
+    $(document).ready(function(){
+        $("#btn1").click(function(){
+            $("#div1").append("<p>This is the paragraph after clicking APPEND </p>");
+        })
+
+        $("#btn2").click(function(){
+            $("#div1").after("<p>This is the paragraph after clicking AFTER </p>");
+        })
+
+        $("#btn3").click(function(){
+            $("#div1").prepend("<p>This is the para after clicking PREPEND </p>");
+        })
+
+        $("#btn4").click(function(){
+            $("#div1").before("<p>This is the para after clicking BEFORE </p>");
+        })
+
+        $("#btn5").click(function(){
+            //$("#div1").remove();
+            $("p").remove("#p2");
+        })
+
+        $("#btn6").click(function(){
+            $("#div1").empty();
+        })
+    })
+</script>
+</html>

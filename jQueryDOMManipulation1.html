@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>jQuery DOM Manipulation</title>
+    <link rel="stylesheet" href="css/stylling.css">
+</head>
+<!-- text(); html(); attr(); css(); -->
+<body>
+    <h2>jQuery - DOM Manipulation</h2>
+    <button id="btn1">Set Value</button>
+    <button id="btn2">Get Value</button>
+    <button id="btn3">Action</button>
+
+    <div id="div1" class="myDiv">
+        <p id="p1" class="p1class">This is a <b>PARAGRAPH</b> written in Div.</p>
+    </div>
+</body>
+<script src="jquery-3.5.1.js" type="text/javascript"></script>
+<script>
+    $(document).ready(function(){
+        $("#btn1").click(function(){
+            //$("#p1").attr("class","p2class")
+            $("#p1").css("font-family","calibri");
+        })
+
+        $("#btn2").click(function(){
+            //alert($("#p1").attr('class'));
+            alert($("#p1").css("font-family"))
+        })
+
+        $("#btn3").click(function(){
+            //$('#p1').text("This PARAGRAPH is after clicking on Action button");
+            $('#p1').html("This <b>PARAGRAPH</b> is after clicking on Action button");
+            //alert($('#p1').attr('class'));
+            //alert($('#p1').css('color'));
+        })
+    });
+
+</script>
+</html>

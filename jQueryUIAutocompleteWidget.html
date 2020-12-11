@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Autocomplete widget in jQueryUI</title>
+    <link rel="stylesheet" href="css/jQueryUI.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.structure.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.theme.css">
+
+</head>
+
+<body>
+  <h2>Autocomplete Widget in jQueryUI</h2>
+  <div id="myDiv">
+      <label><b>Enter Your Favorite City : </b></label>
+      <input type="text" name="" id="cityTextBox">
+  </div>
+</body>
+
+<script src="jquery-3.5.1.js" type="text/javascript"></script>
+
+<script src="jquery-ui-1.12.1/jquery-ui.js" type="text/javascript"></script>
+
+<script>
+    $("#cityTextBox").autocomplete(
+        {
+            source:["London","New York","Paris","Moscow",
+                "Tokyo","Dubai","Singapore","Barcelona",
+                "Los Angeles","Madrid","Chicago","Mumbai"] 
+        }
+    );
+</script>
+
+</html>
